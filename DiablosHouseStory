@@ -1,0 +1,74 @@
+import random
+import time
+Friend = input("What is your best friend's name, enter 1 of them")
+Gender = input("Is it a He or She?")
+print ("You and,", Friend) # User imputs friends name
+print("As you take the walk home from school", "you guys see a haunted house, do you enter?," , "Yes or No")
+Response1 = input()
+if Response1 == "Yes":
+  print ("You and,", Friend, "enter the house")
+  print(Friend,"steps on a needle with some liquid in it, do you try and treat it? Choose: Yes/No")
+  Response1p1 = input()
+  if Response1p1 == "Yes":
+    print ("Welldone, you have saved,", Friend, "from an aggressive form of Anthrax")
+    print ("Now as you explore the house, you see something in the distance", "What do you do, do you dip or do you investigate?" , "Choose one: Dip/Investigate")
+    Response1p2 = input()
+    if Response1p2 == "Dip":
+      print("You run back through the entrance of the house, but you and", Friend, "trip and break your legs.")
+      print("The owner of Diablo House eats you and", Friend , "alive")
+      print("Game Over")
+    else: # Investigate
+      print("As you go and investigate, you see a heavy crowbar and", Friend, "sees a heavy baseball bat", "Do you pick the weapons?", "Choose one: Take/Leave")
+      Response1p3 = input()
+      if Response1p3 == "Take":
+        print ("You and", Friend, "have taken the weapon")
+        Weapon = 1
+      else:
+        print("You and", Friend, "have left the weapon.", "Idiot")
+        Weapon = 0
+      
+    
+      print ("A wild ting has appeared, and it goes skrra pa pa ka ka ka, very scary", "Choose: Fight/Flee")
+      Fight_Flee = input()
+      if Fight_Flee == "Flee":
+        print("You and,", Friend, "escape, but time travels faster in the house, and you have 120 missed calls from your mum", "Good Luck!")
+        print ("Game Over")
+      else:
+        print("You have to fight the ting")
+        if Weapon == 1:
+          print("You and,", Friend, "have to hit more than the ting", "otherwise you dead boi")
+          time.sleep(3)
+          print("You jab it in the jaw and", Friend, "kicks it in the groin")
+          UserDamage = int(random.randint(195, 300))
+          TingDamage = int(random.randint(175, 320))
+          time.sleep(4)
+          print ("You and", Friend, "hit  a combined damage of", UserDamage)
+          print ("You guys have been hitting the gym recently, so you have the upper hand!")
+          if UserDamage > TingDamage:
+            print("You and",Friend,"have beaten the ting!")
+            time.sleep(3)
+            print("You and", Friend, "have been idiots, please stop going into random houses thank you")
+          else:
+            print("You and", Friend, "have died")
+            print("Game Over")
+        else:
+          print("Well you should've taken the weapon you idiot")
+          print("Fighting...")
+          UserDamage = int(random.randint(195,230))
+          TingDamage = int(random.randint(185, 250))
+          time.sleep(5)
+          if UserDamage > TingDamage:
+            print("The odds were in your guys favour and you and", Friend, "survived", "now how are you going to explain", Friend,"'s broken ribs to", Gender, "parents?")
+            time.sleep(4)
+            print("Now stop being irresponisble idiots")
+            print("Game Over")
+          else:
+            print("You and", Friend, "died")
+            
+            print ("Game Over")
+  else:
+    print (Friend, "died of Anthrax")
+    print ("Game Over")
+else: 
+  print ("You guys are boring")
+  print ("Game Over")
